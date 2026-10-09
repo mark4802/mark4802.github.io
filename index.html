@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mark Jessing · Projects</title>
+<meta name="description" content="Mark Jessing, Copenhagen. Python web services and data tools built with AI coding agents and checked with automated tests.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+/* Layout: one column, a short intro, then project groups as compact rows (status chip, name, one line, stack, tests) */
+:root{
+  --bg:#f5f6f3; --panel:#ffffff; --fg:#17201b; --muted:#5a665f; --line:#dde3dc;
+  --accent:#1f6f4a; --live:#1f6f4a; --live-bg:#e3f2e9; --built:#7a5a12; --built-bg:#f6eedb;
+  --sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Space Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#111613; --panel:#18201b; --fg:#e6ece7; --muted:#9aa89f; --line:#27322b;
+  --accent:#6cd49d; --live:#6cd49d; --live-bg:#173323; --built:#e7c06a; --built-bg:#33290f; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.55 var(--sans)}
+.wrap{max-width:860px;margin:0 auto;padding:48px 18px 72px}
+h1{font:700 2.2rem/1.15 var(--sans);margin:0 0 8px;text-wrap:balance}
+.lead{color:var(--muted);max-width:62ch;margin:0 0 18px}
+.links{display:flex;flex-wrap:wrap;gap:10px 18px;font:400 .9rem var(--mono)}
+a{color:var(--accent)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:34px 0 8px}
+.fact{border-top:2px solid var(--fg);padding-top:8px}
+.fact b{display:block;font:700 1.6rem var(--mono)}
+.fact span{color:var(--muted);font-size:.92rem}
+h2{font:700 .8rem var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:46px 0 12px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.p{display:grid;grid-template-columns:96px 1fr;gap:4px 16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.chip{font:700 .7rem var(--mono);text-transform:uppercase;letter-spacing:.06em;padding:3px 8px;border-radius:4px;align-self:start;text-align:center}
+.live{background:var(--live-bg);color:var(--live)}
+.built{background:var(--built-bg);color:var(--built)}
+.p h3{margin:0;font-size:1.08rem}
+.p h3 a{text-decoration:none}
+.p p{margin:2px 0 0;color:var(--fg)}
+.meta{grid-column:2;font:400 .8rem var(--mono);color:var(--muted)}
+.how{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:18px 20px}
+.how p{margin:0 0 8px}
+footer{margin-top:48px;color:var(--muted);font-size:.9rem}
+@media (max-width:520px){.p{grid-template-columns:1fr}.meta{grid-column:1}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Mark Jessing</h1>
+  <p class="lead">Computer science graduate (AP Degree, Copenhagen, 2026). I build web services and data tools with AI coding agents, and I spend most of my time checking that the result is actually correct: automated tests, validation of model output, and rules checked against the official legal text.</p>
+  <div class="links">
+    <a href="https://www.linkedin.com/in/markjessing01">LinkedIn</a>
+    <a href="https://github.com/mark4802">GitHub</a>
+    <span>markjessing01@gmail.com</span>
+    <span>Copenhagen, Denmark</span>
+  </div>
+
+  <div class="facts">
+    <div class="fact"><b>5</b><span>web services live in production</span></div>
+    <div class="fact"><b>9</b><span>more products built and tested, not yet launched</span></div>
+    <div class="fact"><b>2,100+</b><span>automated tests across the projects</span></div>
+  </div>
+
+  <h2>Live in production</h2>
+  <div class="p"><span class="chip live">Live</span><div><h3><a href="https://opholdstjek.dk">opholdstjek.dk</a></h3><p>Bilingual rules engine on the Danish Aliens Act: a questionnaire shows a foreign national's route to permanent residence, with paid PDF report. Rules checked against the published law text.</p></div><div class="meta">Python · Flask · SQLite · Stripe · Docker · Linux VPS · 340+ tests</div></div>
+  <div class="p"><span class="chip live">Live</span><div><h3><a href="https://brugtmomsberegner.dk">brugtmomsberegner.dk</a></h3><p>Margin-VAT calculator for second-hand dealers, sold as a monthly subscription.</p></div><div class="meta">Python · Flask · Stripe subscriptions · Docker · 100+ tests</div></div>
+  <div class="p"><span class="chip live">Live</span><div><h3><a href="https://hvidvasktjek.dk">hvidvasktjek.dk</a></h3><p>Independent test of anti-money-laundering policies for small bookkeepers, accountants and estate agents, required under the Danish AML act (§ 8(4)) since September 2026. Fixed-price service with an example report.</p></div><div class="meta">Python · Flask · Docker · 130+ tests</div></div>
+  <div class="p"><span class="chip live">Live</span><div><h3><a href="https://xn--10rsplan-b0a.dk">10årsplan.dk</a></h3><p>Statutory 10-year maintenance plans for landlords and owners' associations.</p></div><div class="meta">Python · Flask · Stripe · Docker · 120+ tests</div></div>
+  <div class="p"><span class="chip live">Beta</span><div><h3>lcarapport.dk</h3><p>Reads a customer's building drawing through the Anthropic API (tool use, fixed JSON schema), validates every field against allowed values and ranges, and produces a climate (LCA) calculation. Invalid answers become "missing" instead of a guess. In private beta.</p></div><div class="meta">Python · Anthropic API · validation · Stripe · Docker · 180+ tests</div></div>
+
+  <h2>Built and tested, not yet launched</h2>
+  <div class="p"><span class="chip built">Built</span><div><h3>CBAM check</h3><p>EU Carbon Border Adjustment Mechanism: checks the 50-tonne threshold and estimates certificate cost from the Commission's default values.</p></div><div class="meta">Python · Flask · 140+ tests</div></div>
+  <div class="p"><span class="chip built">Built</span><div><h3>Estate papers (dødsbo)</h3><p>Helps relatives settle an estate: likely probate type, deadlines from the date of death, checklist and draft documents.</p></div><div class="meta">Python · Flask · 160+ tests</div></div>
+  <div class="p"><span class="chip built">Built</span><div><h3>EUDR check</h3><p>EU Deforestation Regulation: coordinate check and draft due-diligence statement.</p></div><div class="meta">Python · Flask · 80+ tests</div></div>
+  <div class="p"><span class="chip built">Built</span><div><h3>EV registration tax 2026 vs 2027</h3><p>Calculates the tax on a new electric car registered this year versus next, with a step-by-step PDF. Fixed rules, no AI in the calculation.</p></div><div class="meta">Python · Flask · 80+ tests</div></div>
+  <div class="p"><span class="chip built">Built</span><div><h3>Packaging report</h3><p>Packaging (EPR) reporting for webshops: upload a sales export, get kilos per material and the filing files.</p></div><div class="meta">Python · Flask · CSV/Excel parsing · 110+ tests</div></div>
+  <div class="p"><span class="chip built">Built</span><div><h3>CE machine declarations</h3><p>EU declarations of conformity and incorporation under the Machinery Regulation (EU) 2023/1230, in Danish and English.</p></div><div class="meta">Python · Flask · PDF/Word output · 90+ tests</div></div>
+  <div class="p"><span class="chip built">Built</span><div><h3>Rural property choice report</h3><p>Decision report for owners whose property is reclassified in the 2027 Danish property valuation.</p></div><div class="meta">Python · Flask · 120+ tests</div></div>
+  <div class="p"><span class="chip built">Built</span><div><h3>Gift and inheritance tax between siblings</h3><p>Compares the tax under the 2026 rules and the rules from 1 January 2027.</p></div><div class="meta">Python · Flask · 130+ tests</div></div>
+  <div class="p"><span class="chip built">Built</span><div><h3>Work-permit certification check</h3><p>Checks a company against the nine conditions of the new Danish pay-limit scheme from 2027. Extension of Opholdstjek.</p></div><div class="meta">Python · Flask · part of the Opholdstjek suite</div></div>
+
+  <h2>Data pipelines</h2>
+  <div class="p"><span class="chip live">Ran</span><div><h3>Building-permit pipeline</h3><p>Pulled building-case data (BBR) from seven Danish municipalities every week, processed it in parallel, sorted cases by trade and generated letters and welcome emails. Every recipient checked against the Danish Robinson opt-out list first.</p></div><div class="meta">Python · concurrent.futures · ~4,400 lines</div></div>
+  <div class="p"><span class="chip live">Ran</span><div><h3>Import price engine</h3><p>Compared Japanese auction listings with Vinted resale prices, including shipping and customs, and was used for a real import trade in August 2026.</p></div><div class="meta">Python · REST APIs · data analysis</div></div>
+
+  <h2>How I work</h2>
+  <div class="how">
+    <p>I build with AI coding agents (mainly Claude Code): I describe what should be built, test the result on real data and keep fixing until it holds.</p>
+    <p>I don't trust a model or a dataset blindly. Model output is validated before it is used, legal rules are checked against the official text rather than summaries, and every project ships with automated tests.</p>
+    <p>Experience: developer internship at Adnami (adtech, C#, JavaScript, SQL, graded 12, the top grade) and a contract with Mercor as a Danish AI safety annotator (red-teaming LLMs, October 2026).</p>
+  </div>
+
+  <footer>Source code for the products is private because they are commercial services. Happy to walk through any of them in an interview.</footer>
+</div>
+</body>
+</html>
